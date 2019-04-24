@@ -38,8 +38,7 @@ def register():
   
     if not password1 and len(password1) >20 or len(password1) < 3:
         password1Error = "Password is required and must be 3 to 20 characters long"
-    #if password1 != password2:
-        print("password1"=="password2")
+    if password1 != password2:
         password2Error= "Passwords must match"
     if email:
         if "@" in email:
