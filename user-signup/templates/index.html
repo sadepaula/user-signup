@@ -6,28 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    <h1> My Sign-Up Form </h1>
-    <form action="/welcome" method="POST">
+<form action="/signup" id="form" method="POST">
+        <h1> Signup Form </h1>
         <label for="username">Username:</label>
-        <input id="username" type="text" name="username"/>
+        <input id="username" type="text" name="username" value= "{{username}}"/>
 
-        <br>
-        <br>
+        <p class="error"> {{usernameError}} </p>
 
-        <label for="password1">Password:</label>
-        <input id= password1 type="password" name= "password1"/>
+        <label for="password1">Write Password:</label>
+        <input id= password1 type="password" name= "password1" value= "{{password1}}"/>
 
-         <br>
-         <br>
+         <p class="error"> {{password1Error}} </p> 
 
         <label> Rewirte Password:
-        <input id="password2" type="password" name= "password2"/>
+        <input id="password2" type="password" name= "password2" value= "{{password2}}"/>
+        <p class="error"> {{password2error}} </p> 
         </label>
-        
-        <input type="submit"/>
 
+        <label for="email">Email(Optional):</label>
+        <input id= email type="text" name= "email" value="{{email}}"/>
 
+        <p class="error"> {{emailError}} </p>
+
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
